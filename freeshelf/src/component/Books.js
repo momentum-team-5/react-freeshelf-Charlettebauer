@@ -8,7 +8,13 @@ export default function Book (props) {
   return (
     <div className='Book'>
       <h2>{book.title}</h2>
-      <div><img style={{ height: '150px' }} src={book.coverImageUrl} /></div>
+      <div><img
+        style={{
+          height: '150px',
+          float: 'right'
+        }} src={book.coverImageUrl}
+           />
+      </div>
       <div>Author: {book.author}</div>
       <p>{book.shortDescription}</p>
       <button onClick={() => setReadMore(!readMore)}>
